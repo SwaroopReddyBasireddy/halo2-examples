@@ -1,0 +1,49 @@
+[package]
+name = "fibonacci"
+version = "0.1.0"
+edition = "2021"
+
+
+# [[bin]]
+# name = "example1"
+# path = "src/example1.rs"
+
+# [[bin]]
+# name = "example2"
+# path = "src/example2.rs"
+
+# [[bin]]
+# name = "example3"
+# path = "src/example3.rs"
+
+# [[bin]]
+# name = "arithmetic"
+# path = "src/arithmetic_gates.rs"
+
+
+# [[bin]]
+# name = "example_iszero"
+# path = "src/example_iszero.rs"
+
+
+[workspace]
+members = [
+    "gadget/IsZero",
+]
+
+[lib]
+name = "halo2_examples"
+path = "src/lib.rs"
+
+[features]
+dev-graph = ["halo2_proofs/dev-graph", "plotters"]
+
+[dependencies]
+halo2 = "0.0.0"
+halo2_proofs = "0.2.0"
+plotters = {version = "0.3", optional =  true}
+tabbycat = {version ="0.1", features = ["attributes"], optional = true}
+gadget = {  path = "gadget/IsZero"  }
+group = "0.13.0"
+
+
