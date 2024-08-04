@@ -1,6 +1,8 @@
 # halo2-examples
 Simple examples to illustrate the usage of halo2 rust library
 
+## To build the code
+cargo build
 
 ## Run examples
 cargo test -- --nocapture test_example1 \\
